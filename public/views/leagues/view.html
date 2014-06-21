@@ -1,6 +1,19 @@
 <div ng-controller="LeaguesController" ng-init="findOne()">
   <h2>{{ league.name }}</h2>
-  <p><strong>Commissioner: </strong>{{ league.commissioner.name }}</p>
+  <!--<p><strong>Commissioner: </strong>{{ league.commissioner.name }}</p>-->
+    <p><strong>Room Type: </strong>{{ league.room_type }}</p>  
+    <p><strong>Room Capacity: </strong>{{ league.room_capacity }}</p>
+    <p><strong>Room Facilities: </strong>{{ league.room_facilities }}</p>  
+    <p><strong>Room Description: </strong>{{ league.room_description }}</p>
+    <p><strong>Room Price: </strong>{{ league.room_price }}</p>
   <br>
+
+    <!--<div date-range start="start" end="end" ng-model="league.dateRange"></div>-->
+    <p>Start Date</p><br />
+    <input type="datetime" date-time ng-model="league.start"><br />
+    <p>End Date</p><br />
+    <input type="datetime" date-time ng-model="league.end" hours format="short" ><br />
+
+    <button href="#" ng-click="bookFunc();">Book This Room Muthafacker! </button>
   <a href="#!/leagues">View all leagues</a>
 </div>
