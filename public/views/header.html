@@ -1,19 +1,19 @@
 <div class="top-header" id="header" ng-controller="HeaderController">
         <div class="wrap">
-        <div class="top-header-left" ng-hide="auth">
+        <div class="top-header-left" ng-hide="global.isSignedIn()">
           <ul >
           <li><a href="signup">Signup</a></li>
            <li class="divider-vertical"></li>
            <li><a href="signin">Signin</a></li>
-            <li ng-hide ng-show="auth"><p><span> </span> Welcome, {{user.name}}</p></li>
+            <li ng-hide ng-show="auth"><p><span> </span> Welcome, {{global.currentUser().name}}</p></li>
             <li><p><span> </span>Not a Member ? </p>&nbsp;<a class="reg" href="#/signup"> Register</a></li>
             <div class="clear"> </div>
           </ul>
         </div>
-        <div class="top-header-left" ng-hide="!auth">
+        <div class="top-header-left" ng-hide="!global.isSignedIn()">
           <ul >
-            <li><a href="#/signin"  ng-click="logout();"><span> </span> Logout</a></li>
-            <li ng-hide ng-show="auth"><p><span> </span> Welcome, {{user.name}}</p></li>
+            <li><a href="signup" "><span> </span> Logout</a></li>
+            <li ng-hide ng-show="global.isSignedIn()"><p><span> </span> Welcome, {{global.currentUser().name}}</p></li>
             <div class="clear"> </div>
           </ul>
         </div>
@@ -28,6 +28,7 @@
         <div class="clear"> </div>
       </div>
       </div>
+
       <div class="header">
         <div class="wrap">
         <!--- start-logo---->
@@ -41,6 +42,7 @@
               <li class="home-nav"><a href="#!/nflteams">Hardcoded stuff</a></li>
               <li class="bookings-nav"><a href="#!/leagues">View All Rooms</a></li>
               <li class="oferte-nav"><a href="#!/leagues/create">Create Rooms</a></li>
+              <li class="home-nav"><a href="#!/myBookings">My Bookings</a></li>
               <li class="contact-nav"><a href="#/contact">Contact</a></li>
             </ul> 
         </div>

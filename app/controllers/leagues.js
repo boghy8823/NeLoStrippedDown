@@ -9,9 +9,11 @@ var mongoose = require('mongoose')
 exports.create = function (req, res) {
     var league = new League(req.body)
     league.commissioner = req.user
+    league.overall_booked = false;
+   
     league.save()
     res.jsonp(league)
-    console.log("League Create", league);
+    console.log("League Create", req);
 }
 
 // SHow

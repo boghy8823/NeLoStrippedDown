@@ -10,11 +10,14 @@ var LeagueSchema = new Schema({
     room_facilities: { type: String },
     room_description: { type: String },
     room_price: { type: Number },
-    startDate: { type: Date },
-    endDate: { type: Date },
+    overall_booked:Boolean,
+    bookingDate: [{
+        booked: Boolean,
+        startDate: Date,
+        endDate: Date,
+    }],
     commissioner: { type: Schema.ObjectId, ref: 'User' }
 });
-
 LeagueSchema.statics = {
     load: function (id, cb) {
         this.findOne({ _id: id }).populate('commissioner').exec(cb);

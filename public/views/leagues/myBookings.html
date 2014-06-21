@@ -1,15 +1,13 @@
 <div ng-controller="LeaguesController" ng-init="find()">
   <ul class="unstyled">
     <h2>Leagues Listing</h2>
-    <li ng-repeat="league in leagues| filter:league.overall_booked">
+    <li ng-repeat="league in leagues| filter:league.commisioner.email == window.user.email">
       <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
       (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
       (<a href="" ng-click="destroy(league)" >Remove</a>)
     </li>
   </ul>
   <br>
-Booked Rooms Only  <input type="checkbox" data-ng-model='league.overall_booked' data-ng-true-value='true' data-ng-false-value='' /><br />
-Show available rooms Only  <input type="checkbox" data-ng-model='league.overall_booked' data-ng-true-value='false' data-ng-false-value='' /><br />
   <a href="#!/leagues/create">Create a new league</a>
 
 </div>

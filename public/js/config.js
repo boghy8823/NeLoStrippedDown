@@ -29,6 +29,10 @@ window.app.config(['$routeProvider', function ($routeProvider) {
       {
           templateUrl: 'views/leagues/view.html'
       })
+      .when('/myBookings',
+      {
+          templateUrl: 'views/leagues/myBookings.html'
+      })
     .otherwise({ redirectTo: '/' });
 }]);
 

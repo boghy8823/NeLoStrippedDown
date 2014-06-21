@@ -15,11 +15,9 @@ window.angular.module('ngff.controllers.leagues', [])
         $scope.bookFunc = function () {
            
             var league = $scope.league;
-            league.startDate = this.league.start;
-            league.endDate = this.league.end;
-
-            console.log("Start Date", league.startDate);
-            console.log("Start Date", league.endDate);
+            league.bookingDate.push({ startDate: this.league.start, endDate: this.league.end, booked: true });
+            league.overall_booked = true;
+            console.log("Start Date", league);
 
             league.$update(function () {
                 $location.path('leagues/' + league._id);
@@ -35,11 +33,10 @@ window.angular.module('ngff.controllers.leagues', [])
                 room_description: this.league.room_description,
                 room_price: this.league.room_price,
                 startDate: this.league.startDate,
-                endDate: this.league.endDate
+                endDate: this.league.endDate,
             });
-            
+         
             console.log("League controller", league);
-          
             league.$save(function (response) {
                 $location.path("leagues/" + response._id);
             });
