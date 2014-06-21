@@ -33,6 +33,15 @@ window.app.config(['$routeProvider', function ($routeProvider) {
       {
           templateUrl: 'views/leagues/myBookings.html'
       })
+      .when ('/contact',
+        {  
+          templateUrl: 'views/leagues/contact.html'
+        })
+      .when ('/about',
+       {
+          templateUrl: 'views/leagues/about.html'
+
+      })
     .otherwise({ redirectTo: '/' });
 }]);
 

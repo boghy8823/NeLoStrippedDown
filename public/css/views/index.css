@@ -858,7 +858,7 @@ body{
 /* Button Style                                                                  */
 /*********************************************************************************/
 
-  .!button
+  .button
   {
     display: inline-block;
     padding: 1em 2em 1em 2em;
@@ -1113,3 +1113,6 @@ input#price {
     opacity: 0.7;
 }
 
+.contact-info {
+  padding: 0.3em 0;
+}
