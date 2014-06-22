@@ -1,12 +1,11 @@
 <div ng-controller="LeaguesController" ng-init="find()">
   <ul class="unstyled">
-    <h2>Rooms Listing</h2>
+    <h2>My Bookings</h2>
     <li ng-repeat="league in leagues| filter:league.commisioner.email == window.user.email">
       <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
-      (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
-      (<a href="" ng-click="destroy(league)" >Remove</a>)
+     
     </li>
   </ul>
   <br>
-  <button class ="button2"><a href="#!/leagues/create">Create a new Room</a></button>
+  <button class ="button2"><a href="#!/leagues">View All Rooms</a></button>
 </div>

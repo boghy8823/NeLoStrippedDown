@@ -39,7 +39,7 @@ window.angular.module('ngff.controllers.adminLeagues', [])
          
             console.log("League controller", league);
             league.$save(function (response) {
-                $location.path("leagues/" + response._id);
+                $location.path("admin/leagues/" + response._id);
             });
 
             this.league.name = "";
@@ -65,7 +65,7 @@ window.angular.module('ngff.controllers.adminLeagues', [])
         $scope.update = function () {
             var league = $scope.league;
             league.$update(function () {
-                $location.path('leagues/' + league._id);
+                $location.path('admin/leagues/' + league._id);
             });
         };
 

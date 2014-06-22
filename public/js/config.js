@@ -17,13 +17,17 @@ window.app.config(['$routeProvider', function ($routeProvider) {
       {
           templateUrl: 'views/leagues/list.html'
       })
-      .when('/leagues/create',
+      .when('/admin/leagues/create',
       {
           templateUrl: 'views/leagues/create.html'
       })
-      .when('/leagues/:leagueId/edit',
+      .when('/admin/leagues/:leagueId/edit',
       {
           templateUrl: 'views/leagues/edit.html'
+      })
+      .when('/admin/leagues/:leagueId',
+      {
+          templateUrl: 'views/leagues/admin_view.html'
       })
       .when('/leagues/:leagueId',
       {
@@ -32,6 +36,10 @@ window.app.config(['$routeProvider', function ($routeProvider) {
       .when('/myBookings',
       {
           templateUrl: 'views/leagues/myBookings.html'
+      })
+      .when('/admin/latest',
+      {
+          templateUrl: 'views/leagues/latestBookings.html'
       })
       .when('/admin/leagues',
       {

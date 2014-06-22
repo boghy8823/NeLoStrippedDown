@@ -44,7 +44,7 @@ exports.signup = function (req, res) {
 
 exports.signout = function (req, res) {
   req.logout()
-  res.redirect('/')
+  res.redirect('admin/signup')
 }
 
 /**

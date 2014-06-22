@@ -1,0 +1,13 @@
+<div ng-controller="AdminLeaguesController" ng-init="find()">
+     <div ng-include src="'views/admin_header.html'"></div>
+  <ul class="unstyled">
+    <h2>Latest Bookings</h2>
+    <li ng-repeat="league in leagues| filter:league.overall_booked=true">
+      <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
+      (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
+      (<a href="" ng-click="destroy(league)" >Remove</a>)
+    </li>
+  </ul>
+  <br>
+ <button class="button2"><a href="#!/admin/leagues">View all Rooms</a> </button>
+</div>

@@ -3,8 +3,7 @@
     <h2>Room Listing</h2>
     <li ng-repeat="league in leagues| filter:league.overall_booked">
       <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
-      (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
-      (<a href="" ng-click="destroy(league)" >Remove</a>)
+      
     </li>
   </ul>
 </div>
@@ -24,7 +23,7 @@
                      <label for="squaredTwo"></label>
                    </div>
                     </div>
-                    <button class= "button2"><a href="#!/leagues/create">Create a new Room</a></button>
+                  
        </div>
 
         </div>

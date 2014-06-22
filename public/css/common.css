@@ -49,3 +49,14 @@ div.admin-title > p {
 .admin-header {
     margin-top: -50px;
 }
+
+p.admin-title {
+    text-align: center;
+    line-height: 5px;
+    position: absolute;
+    margin-top: 17px;
+    left: 50%;
+    margin-left: -80px;
+    font-size: 20px;
+    color: #FFF;
+}

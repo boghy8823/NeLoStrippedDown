@@ -1,0 +1,22 @@
+<div ng-controller="AdminLeaguesController" ng-init="findOne()">
+     <div ng-include src="'views/admin_header.html'"></div>
+ <div class="container-book-room">
+        <div class="left-content-room">
+            </div>
+        </div>
+        <div class="right-content-room">
+            <h2>{{ league.name}}</h2>
+         <div class="facilities">
+            <p><span class="boldType"> Room type:  </span>{{ league.room_type }}</p>
+            <p><span  class="boldType"> Room Capacity:  </span>{{ league.room_capacity }}</p>
+            <p><span  class="boldType"> Facilities:  </span>{{ league.room_facilities }}</p>
+            <p><span  class="boldType"> Description:  </span>{{ league.room_description }}</p>
+            <p><span  class="boldType"> Price:  </span>{{ league.room_price }}</p>
+            <br>
+         </div>
+
+    <!--<div date-range start="start" end="end" ng-model="league.dateRange"></div>-->
+   
+    <button class="button2"><a href="#!/admin/leagues">View all Rooms</a> </button>
+</div>
+

@@ -2,11 +2,11 @@
 <div ng-controller="AdminLeaguesController" ng-init="find()">
     <div ng-include src="'views/admin_header.html'"></div>
   <div class="right-content-room">
-    <h2>Leagues Listing</h2>
+    <h2>Rooms Listing</h2>
 
     <li ng-repeat="league in leagues| filter:league.overall_booked">
-      <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
-      (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
+      <a href="#!/admin/leagues/{{ league._id }}">{{league.name}}</a>
+      (<a href="#!/admin/leagues/{{ league._id }}/edit">Edit</a>)
       (<a href="" ng-click="destroy(league)" >Remove</a>)
     </li>
   </ul>
@@ -14,7 +14,7 @@
   <br>
 Booked Rooms Only  <input type="checkbox" data-ng-model='league.overall_booked' data-ng-true-value='true' data-ng-false-value='' /><br />
 Show available rooms Only  <input type="checkbox" data-ng-model='league.overall_booked' data-ng-true-value='false' data-ng-false-value='' /><br />
-  <button class= "button2"><a href="#!/leagues/create">Create a new league</a></button>
+  <button class= "button2"><a href="#!/leagues/create">Create a new Room</a></button>
 
 
 </div>
