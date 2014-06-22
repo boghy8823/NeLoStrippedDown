@@ -15,13 +15,13 @@
            
            <div class="type-capacity">
                <ul class="facilities-list"> 
-                    <li class="room-type" href="#!/leagues/{{ league._id }}">{{league.room_type}}</li>
-                    <li class="room-capacity" href="#!/leagues/{{ league._id }}">{{league.room_capacity}}</li>
-                    <li class="room-facilities" href="#!/leagues/{{ league._id }}">{{league.room_facilities}}</li>
-                    <li class="room-price" href="#!/leagues/{{ league._id }}">{{league.room_price}}</li>    
+                    <li class="room-type" href="#!/leagues/{{ league._id }}">Room type: <span class="coloured">{{league.room_type}}</span></li>
+                    <li class="room-capacity" href="#!/leagues/{{ league._id }}">Capacity:<span class="coloured"> {{league.room_capacity}}</span></li>
+                    <li class="room-facilities" href="#!/leagues/{{ league._id }}">Facilties: <span class="coloured">{{league.room_facilities}}</span></li>
+                    <li class="room-price" href="#!/leagues/{{ league._id }}">Price: <span class="coloured">{{league.room_price}}</span></li>    
                </ul>
            </div>
-            <div class="room-description" href="#!/leagues/{{ league._id }}">{{league.room_description}}</div>
+            <div class="room-description" href="#!/leagues/{{ league._id }}">Description: {{league.room_description}}</div>
            <a class="book-button-list" href="#!/leagues/{{ league._id }}">Book It</a>
        </div>
      <!--(<a href="#/leagues/{{ room.$id }}/edit">Edit</a>)-->

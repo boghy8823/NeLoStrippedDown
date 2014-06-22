@@ -10,18 +10,62 @@ window.angular.module('ngff.controllers.leagues', [])
             yearRange: '1900:-0'
         };
 
-        // Book that shit real good
+        // Book that  real good
 
         $scope.bookFunc = function () {
-           
+
             var league = $scope.league;
+            var overbooking = false;
+            console.log("Input value", this.league.start);
+
+            if (league.bookingDate.length > 0) {
+
+                var DatesArray = [];
+                var startingDatesArray = [];
+
+                for (var key in league.bookingDate) {
+                    DatesArray.push(league.bookingDate[key]);
+                    console.log("This is Dates Array", DatesArray)
+                }
+
+                for (var i = 0; i < DatesArray.length; i++) {
+                    startingDatesArray.push(Math.round(new Date(DatesArray[i].startDate).getTime() / 1000));
+                }
+
+                var inputValue = Math.round(new Date(this.league.start).getTime() / 1000);
+                
+                console.log("My date", inputValue);
+
+                if (startingDatesArray.indexOf(inputValue) != -1) {
+                    overbooking = true;
+                    console.log("Overbooking neniccaaa");
+                    
+                    $('.overbooking-form').css('display','inline-block');
+                    $('.overbooking-message').css('display', 'inline-block');
+                   
+                }
+                console.log("start Array", startingDatesArray);
+
+            }
             league.bookingDate.push({ startDate: this.league.start, endDate: this.league.end, booked: true });
             league.overall_booked = true;
-            console.log("Start Date", league);
 
-            league.$update(function () {
-                $location.path('leagues/' + league._id);
-            });
+            if (overbooking != true) {
+
+                $('.overbooking-form').hide();
+                $('.overbooking-message').hide();
+
+                league.$update(function () {
+                    $location.path('leagues/' + league._id);
+                    $('.facilities').hide();
+                    $('.success-message').show();
+                    setTimeout(function () {
+                        $('.success-message').hide();
+                        $('.facilities').show();
+                    }, 3500);
+                });
+            }
+         
         };
         // Create
         $scope.create = function () {
@@ -77,6 +121,4 @@ window.angular.module('ngff.controllers.leagues', [])
                 }
             }
         };
-
-
     }]);

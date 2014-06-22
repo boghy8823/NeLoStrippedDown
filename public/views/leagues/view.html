@@ -5,6 +5,13 @@
         </div>
         <div class="right-content-room">
             <h2>{{ league.name}}</h2>
+            <div class="success-message">
+                <span class="congrats-icon"></span>
+                <p><span class="congrats">Congratulations! </span><br />
+                    The room has been Booked</p>
+            </div>
+          
+
          <div class="facilities">
             <p><span class="boldType"> Room type:  </span>{{ league.room_type }}</p>
             <p><span  class="boldType"> Room Capacity:  </span>{{ league.room_capacity }}</p>
@@ -16,11 +23,28 @@
 
     <!--<div date-range start="start" end="end" ng-model="league.dateRange"></div>-->
     <p>Start Date</p><br />
-    <input type="datetime" date-time ng-model="league.start"><br />
+    <input type="datetime" date-time ng-model="league.start" class="startDate-booking"><br />
     <p>End Date</p><br />
     <input type="datetime" date-time ng-model="league.end" hours format="short" ><br />
 
     <button class="button2" ng-click="bookFunc();">Book This Room </button>
     <button class="button2"><a href="#!/leagues">View all Rooms</a> </button>
 </div>
-
+      <div class="overbooking-message">
+                <span class="sad-icon"></span>
+                <p><span class="sorry">We are Sorry! </span><br />
+                    This room is already booked. <br/>
+                    Please put your name on our waiting list <br/>
+                    Or choose another date.
+                </p>
+            </div>
+<div class="overbooking-form">
+    <p class="overbook-title">We will inform you when this rooms is free</p>
+    <p class="overbook-info">Please enter your details here</p>
+    <form class="overbooking-client">
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+        Email: <input type="text" name="overbook-email">
+    </form>
+    <button type="submit">Submit</button>
+</div>

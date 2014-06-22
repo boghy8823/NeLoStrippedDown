@@ -908,7 +908,7 @@ body{
 .room-pictures {
     width:250px;
     height: 250px;
-    background-image: url('../images/pozecamere/camera_normala1.jpeg');
+    background-image: url('img/camera_normala.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border: 5px solid #edf4f2;
