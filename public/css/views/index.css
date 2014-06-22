@@ -993,7 +993,7 @@ ul.facilities-list {
     margin-left: 15px;
     max-width: 65%;
 }
-    .book-now-form > .book-button-detail {
+.book-now-form > .book-button-detail {
              padding: 6px 14px 6px 14px;
              background: #66d5b4;
              width: 63px;
@@ -1115,4 +1115,20 @@ input#price {
 
 .contact-info {
   padding: 0.3em 0;
+}
+
+.button2 {
+padding: 6px 14px 6px 14px;
+background: #66d5b4;
+/* width: 63px; */
+border-radius: 3px;
+/* margin-top: 20px; */
+/* margin-left: 90%; */
+/* margin-top: -26px; */
+position: relative;
+/* top: -7em; */
+padding: 6px 14px 6px 14px;
+background: #66d5b4;
+color: #FFF;
+  
 }
