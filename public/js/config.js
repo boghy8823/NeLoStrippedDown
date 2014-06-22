@@ -33,6 +33,10 @@ window.app.config(['$routeProvider', function ($routeProvider) {
       {
           templateUrl: 'views/leagues/myBookings.html'
       })
+      .when('/admin/leagues',
+      {
+          templateUrl: 'views/leagues/admin_list.html'
+      })
       .when ('/contact',
         {  
           templateUrl: 'views/leagues/contact.html'

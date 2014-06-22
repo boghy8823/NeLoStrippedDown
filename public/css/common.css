@@ -5,5 +5,47 @@
     width: 100%;
 }
 
+.admin-form {
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: 10em;
+}
 
+div.admin-title > p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 34px;
+    text-align: center;
+    color: #776b6b;
+}
 
+.admin-pass > input[type=password] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 10px 0px 10px 0px;
+  border: 1px solid #DDDDDD;
+  width: 190px;
+  height: 30px;
+}
+ 
+.admin-pas > input[type=password]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+
+}
+
+.admin-email > label,
+ .admin-pass > label {
+    display: -webkit-box;
+}
+
+.admin-header {
+    margin-top: -50px;
+}

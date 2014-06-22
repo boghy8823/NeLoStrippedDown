@@ -21,7 +21,7 @@ exports.authCallback = function (req, res, next) {
  */
 
 exports.signin = function (req, res) {
-  res.render('users/signin', {
+  res.render('admin/signin', {
     title: 'Signin',
     message: req.flash('error')
   })
@@ -32,7 +32,7 @@ exports.signin = function (req, res) {
  */
 
 exports.signup = function (req, res) {
-  res.render('users/signup', {
+  res.render('admin/signup', {
     title: 'Sign up',
     user: new User()
   })
@@ -52,7 +52,7 @@ exports.signout = function (req, res) {
  */
 
 exports.session = function (req, res) {
-  res.redirect('/')
+  res.redirect('/#!/admin/leagues')
 }
 
 
@@ -65,7 +65,7 @@ exports.create = function (req, res) {
   user.provider = 'local'
   user.save(function (err) {
     if (err) {
-      return res.render('users/signup', { errors: err.errors, user: user })
+      return res.render('admin/signup', { errors: err.errors, user: user })
     }
     req.logIn(user, function(err) {
       if (err) return next(err)
@@ -80,7 +80,7 @@ exports.create = function (req, res) {
 
 exports.show = function (req, res) {
   var user = req.profile
-  res.render('users/show', {
+  res.render('admin/show', {
     title: user.name,
     user: user
   })

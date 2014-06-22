@@ -2,6 +2,18 @@
 var async = require('async')
 
 module.exports = function (app, passport, auth) {
+    // admin routes 
+    var admin = require('../app/controllers/admin')
+    app.get('/admin/signin', admin.signin)
+    app.get('/admin/signup', admin.signup)
+    app.get('/admin/signout', admin.signout)
+    app.post('/users', admin.create)
+    app.post('/users/session', passport.authenticate('local', { failureRedirect: '/signin', failureFlash: 'Invalid email or password.' }), admin.session)
+    app.get('/users/me', admin.me)
+    app.get('/users/:userId', admin.show)
+
+    app.param('userId', admin.user)
+
 
   // user routes
   var users = require('../app/controllers/users')
