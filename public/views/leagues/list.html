@@ -1,7 +1,6 @@
 <div ng-controller="LeaguesController" ng-init="find()">
   <div class="right-content-room">
-    <h2>Leagues Listing</h2>
-
+    <h2>Room Listing</h2>
     <li ng-repeat="league in leagues| filter:league.overall_booked">
       <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
       (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
@@ -10,11 +9,25 @@
   </ul>
 </div>
   <br>
-Booked Rooms Only  <input type="checkbox" data-ng-model='league.overall_booked' data-ng-true-value='true' data-ng-false-value='' /><br />
-Show available rooms Only  <input type="checkbox" data-ng-model='league.overall_booked' data-ng-true-value='false' data-ng-false-value='' /><br />
-  <button class= "button2"><a href="#!/leagues/create">Create a new league</a></button>
+      <div class = "filters">
+        <div class = "bamboleo">
+           <p> Booked Rooms Only</p> 
+            <div class="squaredOne">
+               <input type="checkbox"  data-ng-model='league.overall_booked' data-ng-true-value='true' data-ng-false-value='' id="squaredOne" name="check"/>
+                <label for="squaredOne"></label>
+                </div>
+              </div></br>
+                <div class = "bamboleo">
+                    <p> Show available rooms Only</p> 
+                    <div class="squaredTwo">
+                    <input type="checkbox"  data-ng-model='league.overall_booked' data-ng-true-value='false' data-ng-false-value='' id="squaredTwo" name="check"/>
+                     <label for="squaredTwo"></label>
+                   </div>
+                    </div>
+                    <button class= "button2"><a href="#!/leagues/create">Create a new Room</a></button>
+       </div>
+
+        </div>
 
 
-</div>
-
-
+          
