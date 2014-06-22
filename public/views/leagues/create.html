@@ -1,10 +1,10 @@
 <div ng-controller="AdminLeaguesController">
      <div ng-include src="'views/admin_header.html'"></div>
   <form class="form-horizontal" ng-submit="create()">
-    <div class="control-group">
+    <div class="create-control-group">
       <label class="control-label" for="name"></label>
       <div class="controls">
-        <input type="text" ng-model="league.name" id="name" placeholder="Name">
+         <input type="text" ng-model="league.name" id="name" placeholder="Name">
           <input type="text" ng-model="league.room_type" id="room_type" placeholder="Room Type">
           <input type="text" ng-model="league.room_capacity" id="room_capacity" placeholder="Room Capacity">
           <input type="text" ng-model="league.room_facilities" id="room_facilities" placeholder="Room Facilities">
@@ -13,7 +13,7 @@
 
       </div>
     </div>
-    <div class="control-group">
+    <div class="create-control-group">
       <div class="controls">
         <input type="submit" class="btn">
       </div>

@@ -60,3 +60,319 @@ p.admin-title {
     font-size: 20px;
     color: #FFF;
 }
+
+.control-group {
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+}
+
+input#name {
+margin-left: 43px;
+}
+
+input#email {
+margin-left: 70px;
+}
+
+input#username {
+margin-left: 38px;
+}
+
+input#password {
+margin-left: 40px;
+}
+
+button.btn.btn-primary {
+margin-top: 21px;
+margin-bottom: 21px;
+}
+
+ .button
+  {
+    display: inline-block;
+    padding: 1em 2em 1em 2em;
+    letter-spacing: 0.10em;
+    margin-top: 2em;
+    padding: 1.40em 3em;
+    border: 2px solid rgba(255,255,255,1);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    color: #FFF;
+  }
+  
+  .button-alt
+  {
+    padding: 1em 2em;
+    border-color: rgba(0,0,0,.8);
+    color: rgba(0,0,0,.8);
+  }
+
+  #three-column .fa
+  {
+    display: block;
+    padding: 1em 0em;
+    color: rgba(0,0,0,1);
+    font-size: 2em;
+  }
+
+.bookings-container {
+    width:100%;
+}
+
+.individual-room > a {
+    font-size: 24px;
+    color: #66d5b4;
+}
+
+
+
+.room-pictures {
+    width:250px;
+    height: 250px;
+    background-image: url('../images/pozecamere/camera_normala1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #edf4f2;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.details-container {
+   margin-left: 15%;
+    height: 260px;
+    margin: 20px 20px 20px 15%;
+    border: 1px solid #939b99;
+    padding: 19px;
+    width: 65%;
+}
+
+.type-capacity,.room-pictures {
+    display: inline-block;
+}
+
+.facilities-list > li {
+    display: inline;
+    font-size:13px;
+    font-weight: bold;
+}
+
+div.room-description {
+    margin-left: 18em;
+    position: relative;
+    top: -226px;
+    width: 400px;
+}
+
+div.individual-room > a {
+    margin-left: 15%;
+}
+
+ul.facilities-list {
+    padding: 0px;
+    margin: 0 0 0 28px;
+}
+
+.book-button-list { 
+    margin-left: 90%;
+    margin-top: -26px;
+    position: relative;
+    top: -7em;
+    padding: 6px 14px 6px 14px;
+    background: #66d5b4;
+    color: #FFF;
+}
+
+    .book-button-list:hover {
+        opacity: 0.7;
+}
+
+.left-content-room {
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    margin-left:15%;
+}
+
+.right-content-room {
+    display: inline-block;
+    vertical-align: top;
+    width:40%;
+}
+
+
+    .right-content-room > h2 {
+        margin-left: 15px;
+        font-size:24px; 
+        color:#66d5b4;
+    }
+.facilities {
+    margin-left:15px;
+    margin-top:20px;
+}
+.boldType {
+    font-weight: bold;
+}
+
+.book-now-form {
+    margin-left: 15px;
+    max-width: 65%;
+}
+    .book-now-form > .book-button-detail {
+             padding: 6px 14px 6px 14px;
+             background: #66d5b4;
+             width: 63px;
+             border-radius: 3px;
+             margin-top: 20px;
+     }
+        .book-now-form > .book-button-detail:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    .book-now-form > a {
+        text-decoration:underline;
+        font-weight:600;
+        color:#727272;
+    }
+        .book-now-form > a:hover {
+            opacity: 0.7;
+        }
+    .book-now-form > input {
+        min-height: 30px;
+        width:189px;
+    }
+.otherwise {
+    color:#6a6a6b;
+    font-size:16px;
+}
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+  width: 190px;
+  height: 30px;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+
+}
+
+.book-button-list2 {
+    padding: 6px 14px 6px 14px;
+    background: #66d5b4;
+    color: #FFF;
+    margin-left: 20px;
+    padding: 6px 14px 6px 14px;
+    color: #FFF;
+    margin-left: 50%;
+    position: relative;
+    left: -100px;
+    top: -2em;
+}
+
+.book-button-list3 {
+    padding: 6px 14px 6px 14px;
+    background: #66d5b4;
+    color: #FFF;
+    margin-left: -60%;
+    position:relative;
+    top:-2em;
+}
+.add-new-form {
+    position:relative;
+    margin-left:50%;
+    left: -100px;
+
+}
+
+input#name {    
+    margin-left: 43px;
+}
+
+input#type {
+    margin-left: 4px;
+}
+
+input#capacity {
+    margin-left: 25px;
+}
+
+input#facilities {  
+    margin-left: 24px;
+}
+
+input#pictures {
+    margin-left: 26px;
+}
+
+input#price {
+    margin-left: 51px;
+}
+
+.add-new-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.add-new-button {
+     width: 120px;
+    padding: 6px 14px 6px 14px;
+    background: #66d5b4;
+    margin-left: 13%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.add-new-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.right-content-room {
+    margin-left: 23%!important;
+}
+
+.details-container {
+    width: 102% !important;
+}
+
+.latest-details-container{
+margin-left: 15%;
+height: 260px;
+margin: 20px 20px 20px 15%;
+border: 1px solid #939b99;
+padding: 19px;
+width: 65%;
+}
+
+.title-latest {
+    text-align:center;
+    font-size:20px;
+}
+
+.regular-details-container {
+margin-left: 15%;
+height: 260px;
+margin: 20px 20px 20px 15%;
+border: 1px solid #939b99;
+padding: 19px;
+width: 65% !important;
+}
+
+.my-bookings {
+ text-align: center;
+ font-size: 20px;
+}

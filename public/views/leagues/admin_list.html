@@ -2,9 +2,8 @@
 <div ng-controller="AdminLeaguesController" ng-init="find()">
     <div ng-include src="'views/admin_header.html'"></div>
   <div class="right-content-room">
-    <h2>Rooms Listing</h2>
 
-    <li ng-repeat="league in leagues| filter:league.overall_booked">
+   <!-- <li ng-repeat="league in leagues| filter:league.overall_booked">
       <a href="#!/admin/leagues/{{ league._id }}">{{league.name}}</a>
       (<a href="#!/admin/leagues/{{ league._id }}/edit">Edit</a>)
       (<a href="" ng-click="destroy(league)" >Remove</a>)
@@ -17,6 +16,29 @@ Show available rooms Only  <input type="checkbox" data-ng-model='league.overall_
   <button class= "button2"><a href="#!/leagues/create">Create a new Room</a></button>
 
 
-</div>
+-->
 
 
+ 
+  <div class="bookings-container">
+    <div class="individual-room" ng-repeat="league in leagues| filter:league.overall_booked">
+      <a href="#!/admin/leagues/{{ league._id }}">{{league.name}}</a>
+       <div class="details-container">
+           <div class="room-pictures" href="#!/admin/leagues/{{ league._id }}">{{room.pictures}}</div>
+           
+           <div class="type-capacity">
+               <ul class="facilities-list"> 
+                    <li class="room-type" href="#!/admin/leagues/{{ league._id }}">{{league.room_type}}</li>
+                    <li class="room-capacity" href="#!/admin/leagues/{{ league._id }}">{{league.room_capacity}}</li>
+                    <li class="room-facilities" href="#!/admin/leagues/{{ league._id }}">{{league.room_facilities}}</li>
+                    <li class="room-price" href="#!/admin/leagues/{{ league._id }}">{{league.room_price}}</li>    
+               </ul>
+           </div>
+            <div class="room-description" href="#!/admin/leagues/{{ league._id }}">{{league.room_description}}</div>
+           <a class="book-button-list" href="#!/admin/leagues/{{ league._id }}">Book It</a>
+       </div>
+     <!--(<a href="#/leagues/{{ room.$id }}/edit">Edit</a>)-->
+     <!--(<a href="" data-ng-click="removeRoom('{{ room.$id }}')" >Remove</a>)-->
+    </div>
+  </div> 
+  </div>

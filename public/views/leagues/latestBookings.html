@@ -1,13 +1,36 @@
 <div ng-controller="AdminLeaguesController" ng-init="find()">
      <div ng-include src="'views/admin_header.html'"></div>
-  <ul class="unstyled">
-    <h2>Latest Bookings</h2>
+<!--  <ul class="unstyled">
+    
     <li ng-repeat="league in leagues| filter:league.overall_booked=true">
       <a href="#!/leagues/{{ league._id }}">{{league.name}}</a>
       (<a href="#!/leagues/{{ league._id }}/edit">Edit</a>)
       (<a href="" ng-click="destroy(league)" >Remove</a>)
     </li>
-  </ul>
+  </ul>-->
   <br>
+    <h2 class="title-latest">Latest Bookings</h2>
+      <div class="bookings-container">
+    <div class="individual-room" ng-repeat="league in leagues | filter:league.overall_booked=true">
+      <a href="#!/admin/leagues/{{ league._id }}">{{league.name}}</a>
+       <div class="latest-details-container">
+           <div class="room-pictures" href="#!/admin/leagues/{{ league._id }}">{{room.pictures}}</div>
+           
+           <div class="type-capacity">
+               <ul class="facilities-list"> 
+                    <li class="room-type" href="#!/admin/leagues/{{ league._id }}">{{league.room_type}}</li>
+                    <li class="room-capacity" href="#!/admin/leagues/{{ league._id }}">{{league.room_capacity}}</li>
+                    <li class="room-facilities" href="#!/admin/leagues/{{ league._id }}">{{league.room_facilities}}</li>
+                    <li class="room-price" href="#!/admin/leagues/{{ league._id }}">{{league.room_price}}</li>    
+               </ul>
+           </div>
+            <div class="room-description" href="#!/admin/leagues/{{ league._id }}">{{league.room_description}}</div>
+           <a class="book-button-list" href="#!/admin/leagues/{{ league._id }}">Book It</a>
+       </div>
+     <!--(<a href="#/leagues/{{ room.$id }}/edit">Edit</a>)-->
+     <!--(<a href="" data-ng-click="removeRoom('{{ room.$id }}')" >Remove</a>)-->
+    </div>
+  </div> 
  <button class="button2"><a href="#!/admin/leagues">View all Rooms</a> </button>
+
 </div>
