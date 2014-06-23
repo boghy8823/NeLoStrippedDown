@@ -372,7 +372,7 @@ body{
 }
 /*----start-wrap----*/
 .wrap{
-  width:70%;
+  width:78%;
   margin:0 auto;
 }
 /*----start-header----*/
@@ -953,7 +953,7 @@ ul.facilities-list {
 }
 
 .book-button-list { 
-    margin-left: 90%;
+    margin-left:85%;
     margin-top: -26px;
     position: relative;
     top: -7em;
