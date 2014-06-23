@@ -2,7 +2,8 @@ NeLo - Online Lodging Application Repository
 
 -- Proiect Tehnologii Web --
 
-
+Studenti: Drimba Tiberiu, An 2 grupa 4B
+          Dumitriu Bogdan, An 2 grupa 4b
 Instructiuni de instalare 
 
 Pre-Requisites
