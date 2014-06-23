@@ -18,7 +18,7 @@ module.exports = {
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'ngFantasyFootball - Development'
+      name: 'Nelo - Development'
     }
   },
   test: {
@@ -26,7 +26,7 @@ module.exports = {
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'ngFantasyFootball - Test'
+      name: 'Nelo - Test'
     }
   },
   production: {
@@ -34,7 +34,7 @@ module.exports = {
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'ngFantasyFootball - Production'
+      name: 'Nelo - Production'
     }
   }
 }
